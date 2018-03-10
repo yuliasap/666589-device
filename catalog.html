@@ -27,8 +27,12 @@
       </a>
 
       <div class="main-header-start">
-        <span class="search">Поиск по сайту</span>
-         <!--здесь будет форма-->
+        <form class="main-header-search" action="https://echo.htmlacademy.ru" method="post">
+          <label>
+            <input type="search"  name="" value="" placeholder="Поиск по сайту">
+          </label>
+          <button class="button" type="submit">Найти</button>
+        </form>
 
         <ul class="user-navigation">
           <li class="user-name"><a href="#">Валентин Петухов</a</li>
@@ -67,7 +71,55 @@
 
       <aside class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Здесь будет форма -->
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>Стоимость</legend>
+              <label for="cost" class="visually-hidden">
+              <input class="visually-hidden filter-input-range" type="range" name="" id="cost" min="0" max="9000">
+              </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Цвет</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="black" id="filter-black" checked>
+                <label for="filter-black">Черный</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="white" id="filter-white">
+                <label for="filter-white">Белый</label> 
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="blue" checked id="filter-blue">
+                <label for="filter-blue">Синий</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="red" checked id="filter-red">
+                <label for="filter-red">Красный</label> 
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="pink" id="filter-pink">
+                <label for="filter-pink">Розовый</label>  
+              </li>
+            </ul>
+            
+          </fieldset>
+          <fieldset>
+            <legend>Bluetooth</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-radio" type="radio" name="product-group" value="yes" id="filter-bluetooth-yes" checked>
+                <label for="filter-bluetooth-yes">Есть</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input-radio" type="radio" name="product-group" value="no" id="filter-bluetooth-no">
+                <label for="filter-bluetooth-no">Нет</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit" class="filter-button button">Показать</button>
+        </form>
       </aside>
 
 
@@ -86,8 +138,8 @@
                 <div class = "catalog-item__picture-wrap">
                   <img src="img/product-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
                   <div class = "catalog-item__overlay">
-                    <a class="button" href="#">В корзину</a>
-                    <a class="button-compare" href="#">Добавить к сравнению</a>
+                    <button type="submit" class="button">В корзину</button>
+                    <button type="submit" class="button-compare">Добавить к сравнению</button>
                   </div>
                 </div>
                 <div class = "catalog-item__content">
@@ -103,8 +155,8 @@
                 <div class = "catalog-item__picture-wrap">
                   <img src="img/product-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
                   <div class = "catalog-item__overlay">
-                    <a class="button" href="#">В корзину</a>
-                    <a class="button-compare" href="#">Добавить к сравнению</a>
+                    <button type="submit" class="button">В корзину</button>
+                    <button type="submit" class="button-compare">Добавить к сравнению</button>
                   </div>
                 </div>
                 <div class = "catalog-item__content">
@@ -120,8 +172,8 @@
                 <div class = "catalog-item__picture-wrap">
                   <img src="img/product-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
                   <div class = "catalog-item__overlay">
-                    <a class="button" href="#">В корзину</a>
-                    <a class="button-compare" href="#">Добавить к сравнению</a>
+                    <button type="submit" class="button">В корзину</button>
+                    <button type="submit" class="button-compare">Добавить к сравнению</button>
                   </div>
                 </div>
                 <div class = "catalog-item__content">
@@ -136,9 +188,10 @@
               <div class="catalog-item">
                 <div class = "catalog-item__picture-wrap">
                   <img src="img/product-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                  <p class="catalog-item__label">New</p>
                   <div class = "catalog-item__overlay">
-                    <a class="button" href="#">В корзину</a>
-                    <a class="button-compare" href="#">Добавить к сравнению</a>
+                    <button type="submit" class="button">В корзину</button>
+                    <button type="submit" class="button-compare">Добавить к сравнению</button>
                   </div>
                 </div>
                 <div class = "catalog-item__content">
@@ -211,9 +264,6 @@
     </footer>
 
    
-    <!-- <section class="map">
-      <h2 class="visually-hidden">Как до нас добраться</h2>
-      <span class="modal-close">x</span>
-    </section> -->
+   
   </body>
 </html>

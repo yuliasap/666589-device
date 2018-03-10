@@ -19,11 +19,19 @@
       </a>
 
       <div class="main-header-start">
-        <span class="search">Поиск по сайту</span>
-        <!--здесь будет форма-->
+        <form class="main-header-search" action="https://echo.htmlacademy.ru" method="post">
+          <label>
+            <input type="search"  name="" value="" placeholder="Поиск по сайту">
+          </label>
+          <button class="button" type="submit">Найти</button>
+        </form>
+          
+
+        <!--<span class="search">Поиск по сайту</span>
+        здесь будет форма-->
 
         <ul class="user-navigation">
-          <li class="user-link"><a href=#>Войти</a></li>
+          <li class="user-link"><a href="login.html">Войти</a></li>
         </ul>
 
         <a href="compare.html">
@@ -39,6 +47,7 @@
         <ul class="main-catalog-navigation">
           <li><a href="catalog.html">Каталог товаров</a></li>
         </ul>
+
         <ul class="main-services-navigation">
           <li><a href="delivery.html">Доставка</a></li>
           <li><a href="guarantee.html">Гарантия</a></li>
@@ -131,13 +140,13 @@
               <h2 class="visually-hidden">Список сервисов</h2>
               <ul class="services-names-list">
                 <li class="services-name-button">
-                  <span class="button-services-slider-1">Доставка</span>
+                  <button class="button-services-slider-1" type="button">Доставка</span>
                 </li>
                 <li class="services-name-button">
-                  <span class="button-services-slider-2">Гарантия</span>
+                  <button class="button-services-slider-2" type="button">Гарантия</span>
                 </li>
                 <li class="services-name-button">
-                <span class="button-services-slider-3">Кредит</span>
+                <button class="button-services-slider-3" type="button">Кредит</span>
                 </li>
               </ul>
             </div>
@@ -214,7 +223,7 @@
         <figure>
           <a href="map.html"><img src="img/map.jpg" width="560" height="222" alt="Карта"></a>
         </figure>
-        <a class="button" href="write-us.html">Напишите нам</a>
+        <button class="button" type="button">Напишите нам</a>
       </section>
     </main>
 
@@ -263,13 +272,33 @@
     </footer>
 
     <section class="write-us">
-      <!--Здесь будет форма-->
-      <span class="modal-close">x</span> 
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="wtite-us-item">
+          <label for="write-us-name">Ваше имя:</label>
+          <input id="write-us-name" type="text" name="name" value="" placeholder="Имя Фамилия" required>
+        </p>
+        <p class="wtite-us-item">
+          <label for="write-us-email">Ваш e-mail:</label>
+          <input id="write-us-email" type="email" name="email" value="" placeholder="email@example.com"> 
+        </p>
+        <p class="wtite-us-item">
+          <label for="write-us-message">Текст письма:</label>
+          <br>
+          <textarea id="write-us-message" name="message" rows="10" cols="90">В свободной форме
+          </textarea>
+        </p>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button> 
     </section>
 
     <section class="map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <span class="modal-close">x</span>
+      <p>
+        <img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу ул. Строителей, д.15, г.Москва">
+      </p>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>
 </html>
