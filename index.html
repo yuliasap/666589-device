@@ -20,16 +20,10 @@
 
       <div class="main-header-start">
         <form class="main-header-search" action="https://echo.htmlacademy.ru" method="post">
-          <label>
-            <input type="search"  name="" value="" placeholder="Поиск по сайту">
-          </label>
+          <input type="search"  name="search-site" value="" placeholder="Поиск по сайту">
           <button class="button" type="submit">Найти</button>
         </form>
-          
-
-        <!--<span class="search">Поиск по сайту</span>
-        здесь будет форма-->
-
+       
         <ul class="user-navigation">
           <li class="user-link"><a href="login.html">Войти</a></li>
         </ul>
@@ -46,6 +40,13 @@
       <nav class="main-navigation">
         <ul class="main-catalog-navigation">
           <li><a href="catalog.html">Каталог товаров</a></li>
+          <ul class="main-catalog-navigation-list">
+            <li><a href="#">Виртуальная реальность</a></li>
+            <li><a href="#">Моноподы для селфи</a></li>
+            <li><a href="#">Экшн-камеры</a></li>
+            <li><a href="#">Фитнес-браслеты</a></li>
+            <li><a href="#">Умные часы</a></li>
+          </ul>
         </ul>
 
         <ul class="main-services-navigation">
@@ -61,7 +62,12 @@
 
       <section class="promo-slider">
         <h2 class="visually-hidden">Промо-слайдер</h2>
-        <!--<figure class="slider-content">-->
+          <div class="slider-control">
+            <button class="active"></button>
+            <button></button>
+            <button></button>
+          </div>
+
           <ul class="promo-slider-item">
             <li>
               <img src="img/slider-1.png" width="384" height="486" alt="Палка для селфи">

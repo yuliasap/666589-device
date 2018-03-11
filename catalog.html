@@ -51,7 +51,15 @@
       <nav class="main-navigation">
         <ul class="main-catalog-navigation">
           <li><a href="catalog.html">Каталог товаров</a></li>
+          <ul class="main-catalog-navigation-list">
+            <li><a href="#">Виртуальная реальность</a></li>
+            <li><a href="#">Моноподы для селфи</a></li>
+            <li><a href="#">Экшн-камеры</a></li>
+            <li><a href="#">Фитнес-браслеты</a></li>
+            <li><a href="#">Умные часы</a></li>
+          </ul>
         </ul>
+     
         <ul class="main-services-navigation">
           <li><a href="delivery.html">Доставка</a></li>
           <li><a href="guarantee.html">Гарантия</a></li>
@@ -74,9 +82,24 @@
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
           <fieldset>
             <legend>Стоимость</legend>
-              <label for="cost" class="visually-hidden">
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale"> <!--шкала-->
+                    <div class="bar"> <!--заполнитель шкалы-->
+                    </div>
+                  </div>
+                  <div class="toogle-min"> <!--левый ползунок-->
+                  </div>
+                  <div class="toogle-max"><!--правый ползунок-->
+                  </div>
+                </div>
+                <div class="price-control">
+                  <span class="price-control-min-value">от 0</span>
+                  <span class="price-control-max-value">до 5000</span>
+                </div>
+              <!--<label for="cost" class="visually-hidden">
               <input class="visually-hidden filter-input-range" type="range" name="" id="cost" min="0" max="9000">
-              </label>
+              </label>-->
           </fieldset>
 
           <fieldset>
@@ -124,9 +147,23 @@
 
 
       <section class="main-catalog">
+
         <div class="sorting">
-          <h2 class="visually-hidden">Сортировка товаров</h2>
-          <!-- Здесь будет форма -->
+          <h2 class="sorting-title">Сортировка:</h2>
+          <ul class="sorting-list">
+            <li class="sorting-list-item">
+              <a href="#"><span class="sorting-list-item-name">По цене</span></a>
+            </li>
+            <li class="sorting-list-item">
+              <a href="#"><span class="sorting-list-item-name">По типу</span></a>
+            </li>
+            <li class="sorting-list-item">
+              <a href="#"><span class="sorting-list-item-name">По популярности</span></a>
+            </li>
+          </ul>
+          <div class="sorting-badges">
+            <a href="#"><span class="sorting-badge-1"></span></a>
+            <a href="#"><span class="sorting-badge-1"></span></a>
         </div>
 
         <section class="catalog">
