@@ -116,20 +116,21 @@ a.main-header-logo{
   font:inherit;
   border:2px solid #000000;
   background-color: transparent;
-  display:none; /*Почему Найти отображается все равно?*/
+  /*Почему Найти отображается все равно?*/
+  display:none; 
 }
-
-.main-header-start input[type="search"]:focus~  /*Не работает*/
+/*Не работает*/
+.main-header-start input[type="search"]:focus~  
 .main-header-start input[type="submit"]{
   display:block;
 }
 
-/*Подменю. Почему не работает????*/
+/*Подменю. Почему не показыватся подменю при наведении????*/
 ul.main-catalog-navigation-list{
   visibility:hidden;
 }
 
-ul.main-catalog-navigation-list:hover{
+li.top:hover ul.main-catalog-navigation-list{
   visibility:visible;
 }
 
@@ -156,9 +157,11 @@ ul.main-catalog-navigation-list:hover{
 .device-catalog-image{
   display: inline-block;
   width: 160px;
-  height: 160px;  /*Нельзя задать высоту ?*/
+  /*Нельзя задать высоту ?*/
+  height: 160px;  
   background-color: rgba(240,197,46,0.5);
-  background-image: url("img/popular-1.svg"); /*Почему не отображается картинка????*/
+  /*Почему не отображается картинка????*/
+  background-image: url("img/popular-1.svg"); 
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -180,6 +183,28 @@ ul.main-catalog-navigation-list:hover{
   letter-spacing: 0,18px;
   font-weight: 700;
 }
+
+/*КАРТИНКИ БРЕНДОВ*/
+
+/*Фильтр для цветных картинок*/
+.logo-list-content img{
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray; /* IE 6-9 */
+}
+
+.logo-list-content img:hover {
+  -webkit-filter: none;
+  -moz-filter: none;
+  -ms-filter: none;
+  -o-filter: none;
+  filter: none;
+  filter: none; /* IE 6-9 */
+}
+
 
 .about-us h2,
 .contacts-map h2,
@@ -259,7 +284,8 @@ p.footer-contacts{
  .button{
   padding-left:43px;
   padding-right:43px;
-  padding-top:-2px; /*Как задать высоту кнопки?*/
+  /*Как задать высоту кнопки?*/
+  padding-top:-2px; 
   text-align: center;
   font-family: "Gilroy", Arial, sans-serif;
   color: #000000;
@@ -277,8 +303,8 @@ p.footer-contacts{
 
 .button:focus,
 .button:active{
-  color: rgba(0,0,0,0.3);
-  }
+  opacity: 0.3;
+}
 
 
 .wtite-us-item input[type="text"],
@@ -299,7 +325,8 @@ p.footer-contacts{
   background-color: #eaeaea;   
 }
 
-.wtite-us-item input[type="text"]:focus,  /*Почему дполнительная серая рамка появляется при нажатии?*/
+/*Почему дполнительная серая рамка появляется при нажатии?*/
+.wtite-us-item input[type="text"]:focus,  
 .wtite-us-item input[type="email"]:focus,
 .wtite-us-item textarea:focus,
 .wtite-us-item input[type="text"]:active,
