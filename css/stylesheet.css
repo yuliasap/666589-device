@@ -98,31 +98,34 @@ a.main-header-logo{
 }
 /*Форма Найти в хедере*/
 .main-header-start input[type="text"]{
-  font:inherit;
-  color:rgba(0,0,0,0.3);
+  width: 354px;
+  padding-left: 40px;
+/*Почему картинка не отображается???*/
+  background-image: url("img/search.svg");
+  opacity: 0.3;
   background-color: transparent;
-  border:none;
+  /*Откуда синяя рамка в фокусе?*/
+  border:none; 
 }
 
 .main-header-start input[type="text"]:hover{
-  color:rgba(0,0,0,0.6);
+  opacity: 0.6;
 }
 
 .main-header-start input[type="text"]:focus{
-  color:rgba(0,0,0,1);
+  opacity: 1;
+  border-bottom:2px solid #000000;
 }
 
-.main-header-start input[type="submit"]{
-  font:inherit;
+.main-header-start button[type="submit"]{
   border:2px solid #000000;
   background-color: transparent;
-  /*Почему Найти отображается все равно?*/
-  display:none; 
+  display: none;
 }
-/*Не работает*/
-.main-header-start input[type="search"]:focus~  
-.main-header-start input[type="submit"]{
-  display:block;
+/*Не работает отображение кнопни Найти при фокусе на поле ввода*/
+.main-header-start input[type="text"]:focus ~
+.main-header-start button[type="submit"]{
+  display: block;
 }
 
 /*Подменю. Почему не показыватся подменю при наведении????*/
@@ -157,7 +160,7 @@ li.top:hover ul.main-catalog-navigation-list{
 .device-catalog-image{
   display: inline-block;
   width: 160px;
-  /*Нельзя задать высоту ?*/
+  /*Нельзя правильно задать высоту ?*/
   height: 160px;  
   background-color: rgba(240,197,46,0.5);
   /*Почему не отображается картинка????*/
@@ -295,6 +298,7 @@ p.footer-contacts{
   background-color: #f0c52e;
   text-transform: uppercase;
   font-weight: 700;
+  border: none;
 }
 
 .button:hover{
@@ -305,6 +309,34 @@ p.footer-contacts{
 .button:active{
   opacity: 0.3;
 }
+
+/*Кнопки*/
+
+/*Не задается стл для кнопок Доставка, Гарантия, Кредит*/
+
+.services-names-list button{
+  width: 160px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+}
+button.button-services-slider{
+  background-color: #f0c52e;
+  /*Как правильно задать ширину кнопок?*/
+  padding-left: 25px;
+  padding-right: 25px;
+}
+button.button-services-slider-current{
+  width: 280px;
+  text-align: left;
+  padding-left: 19px;
+  color:#f7e184;
+  background-color: #000000;
+}
+
 
 
 .wtite-us-item input[type="text"],
