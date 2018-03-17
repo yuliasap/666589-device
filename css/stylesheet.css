@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'gilroyextrabold';
-    src: url('gilroyextrabold-webfont.woff2') format('woff2'),
-         url('gilroyextrabold-webfont.woff') format('woff');
+    src: url('../fonts/gilroyextrabold-webfont.woff2') format('woff2'),
+         url('../fonts/gilroyextrabold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -13,8 +13,8 @@
 
 @font-face {
     font-family: 'gilroylight';
-    src: url('gilroylight-webfont.woff2') format('woff2'),
-         url('gilroylight-webfont.woff') format('woff');
+    src: url('../fonts/gilroylight-webfont.woff2') format('woff2'),
+         url('../fonts/gilroylight-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -102,11 +102,11 @@ a.main-header-logo{
 .main-header-start input[type="text"]{
   width: 354px;
   padding-left: 40px;
-/*Почему картинка не отображается???*/
-  background-image: url(img/search.svg);
+  background-image: url(../img/search.svg);
   opacity: 0.3;
   background-color: transparent;
-  /*Откуда синяя рамка в фокусе?*/
+  background-repeat: no-repeat;
+  outline:none;
   border:none; 
 }
 
@@ -124,14 +124,16 @@ a.main-header-logo{
   background-color: transparent;
   display: none;
 }
-/*Не работает отображение кнопни Найти при фокусе на поле ввода*/
-.main-header-start input[type="text"]:focus ~
-.main-header-start button[type="submit"]{
+
+.main-header-start input[type="text"]:focus + button[type="submit"]{
   display: block;
 }
 
+main-header-start button[type="submit"]:focus{
+  padding: 16px 19px 17px 17px;
+}
+
 /*ПОДМЕНЮ*/
-/*Почему не показыватся подменю при наведении????*/
 ul.main-catalog-navigation-list{
   visibility:hidden;
 }
@@ -179,17 +181,61 @@ td.table-data{
   color: rgba(0, 0, 0, 0.3);
 }
 
-.device-catalog-image{
+/*Изображение устройства*/
+.device-catalog-content::before{
   display: inline-block;
   width: 160px;
-  /*Нельзя правильно задать высоту ?*/
   height: 160px;  
   background-color: rgba(240,197,46,0.5);
-  /*Почему не отображается картинка????*/
-  background-image: url(img/popular-1.svg); 
+  background-repeat: no-repeat;
+  background-position: 50% 50%; 
+}
+
+.device-catalog-content::before:hover{
+  opacity:1; 
+}
+
+.img1::before{
+  background-image: url(../img/popular-1.svg);
+  background-repeat: no-repeat;
+  content:" ";
+}
+
+.img2::before{
+  background-image: url(../img/popular-2.svg);
+  content:" ";
+  background-position: 50% 97%;
+}
+
+.img3::before{
+  background-image: url(../img/popular-3.svg);
+  content:" ";
+}
+
+.img4::before{
+  background-image: url(../img/popular-4.svg);
+  content:" ";
+}
+
+.img5::before{
+  background-image: url(../img/popular-5.svg);
+  content:" ";
+}
+
+.img6::before{
+  background-image: url(../img/popular-6.svg);
+  content:" ";
+}
+/*.device-catalog-image{
+  display: inline-block;
+  width: 160px;
+  height: 160px;  
+  background-color: rgba(240,197,46,0.5);
+  
+  background-image: url(../img/popular-1.svg); 
   background-repeat: no-repeat;
   background-position: 0 0;
-}
+}*/
 
 .device-catalog-image:hover,
 .device-catalog-image:focus{
