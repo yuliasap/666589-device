@@ -17,50 +17,52 @@
   <body>
     <!--<p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>-->
     <header class="main-header">
-      <a class="main-header-logo">
-        <span class="main-header-logo">DEVICE</span>
-      </a>
+      <div class="main-container-header">
+        <a class="main-header-logo">
+          <span class="main-header-logo">DEVICE</span>
+        </a>
 
-      <div class="main-header-start">
-        <form class="main-header-search" action="https://echo.htmlacademy.ru" method="post">
-          <input type="text"  name="search-site" value="" placeholder="Поиск по сайту">
-          <button class="button-search" type="submit">Найти</button>
-        </form>
-       
-        <ul class="user-navigation">
-          <li class="user-link"><a href="login.html">Войти</a></li>
-          <li>
-              <a href="compare.html">
-                <span class="compare">Сравнить</span>
+        <div class="main-header-start">
+          <form class="main-header-search" action="https://echo.htmlacademy.ru" method="post">
+            <input type="text"  name="search-site" value="" placeholder="Поиск по сайту">
+            <button class="button-search" type="submit">Найти</button>
+          </form>
+         
+          <ul class="user-navigation">
+            <li class="user-link"><a href="login.html">Войти</a></li>
+            <li>
+                <a href="compare.html">
+                  <span class="compare">Сравнить</span>
+                </a>
+            </li>
+            <li>
+              <a href="cart.html">
+                <span class="footer-cart">Корзина</span>
               </a>
-          </li>
-          <li>
-            <a href="cart.html">
-              <span class="footer-cart">Корзина</span>
-            </a>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="main-navigation">
+          <ul class="main-catalog-navigation">
+            <li class="top"><a href="#">Каталог товаров</a>
+              <ul class="main-catalog-navigation-list">
+                <li><a href="#">Виртуальная реальность</a></li>
+                <li><a href="catalog.html">Моноподы для селфи</a></li>
+                <li><a href="#">Экшн-камеры</a></li>
+                <li><a href="#">Фитнес-браслеты</a></li>
+                <li><a href="#">Умные часы</a></li>
+              </ul>
+            </li>   
+          </ul>
+
+          <ul class="main-services-navigation">
+            <li><a href="delivery.html">Доставка</a></li>
+            <li><a href="guarantee.html">Гарантия</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
       </div>
-
-      <nav class="main-navigation">
-        <ul class="main-catalog-navigation">
-          <li class="top"><a href="#">Каталог товаров</a>
-            <ul class="main-catalog-navigation-list">
-              <li><a href="#">Виртуальная реальность</a></li>
-              <li><a href="catalog.html">Моноподы для селфи</a></li>
-              <li><a href="#">Экшн-камеры</a></li>
-              <li><a href="#">Фитнес-браслеты</a></li>
-              <li><a href="#">Умные часы</a></li>
-            </ul>
-          </li>   
-        </ul>
-
-        <ul class="main-services-navigation">
-          <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="guarantee.html">Гарантия</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-      </nav>
 
     </header>
     <main class="main-container">
@@ -230,20 +232,19 @@
         </ul>  
       </div>
 
-      <section class="another-section">
-
-        <div class="main-container">
+      <div class="another-section">
+        <div class="main-container-slider">
           <div class="services-names">
             <h2 class="visually-hidden">Список сервисов</h2>
             <ul class="services-names-list">
               <li class="services-name-button">
-                <button class="button-services-slider-current" type="button">Доставка</span>
+                <button class="button-services-slider-current" type="button">Доставка</button>
               </li>
               <li class="services-name-button">
-                <button class="button-services-slider" type="button">Гарантия</span>
+                <button class="button-services-slider" type="button">Гарантия</button>
               </li>
               <li class="services-name-button">
-              <button class="button-services-slider" type="button">Кредит</span>
+              <button class="button-services-slider" type="button">Кредит</button>
               </li>
             </ul>
           </div>
@@ -274,9 +275,7 @@
             </ul>
           </div>
         </div>
-      </section>
-
-      </section>
+      </div>
       <section class="logo-list">
         <h2 class="visually-hidden">Бренды</h2>
         <ul class="logo-list-content">
@@ -327,50 +326,52 @@
     </main>
 
     <footer class="main-footer">
-      <section class="main-footer-start">
-        <h2 class="visually-hidden">Для пользователя</h2>
-        <a class="main-footer-logo"><span class="main-footer-logo">DEVICE</span></a>
-        <ul class="footer-user-navigation">
-          <li class="footer-user-link">
-            <a href="login.html">Войти</a>
-          </li>
-          <li>
-            <a href="compare.html">
-              <span class="footer-compare">Сравнить</span>
-            </a>
-          </li>
-          <li>
-            <a href="cart.html">
-              <span class="footer-cart">Корзина</span>
-            </a>
-          </li>
-        </ul>
-      </section>
+      <div class="main-container-footer">
+        <section class="main-footer-start">
+          <h2 class="visually-hidden">Для пользователя</h2>
+          <a class="main-footer-logo"><span class="main-footer-logo">DEVICE</span></a>
+          <ul class="footer-user-navigation">
+            <li class="footer-user-link">
+              <a href="login.html">Войти</a>
+            </li>
+            <li>
+              <a href="compare.html">
+                <span class="footer-compare">Сравнить</span>
+              </a>
+            </li>
+            <li>
+              <a href="cart.html">
+                <span class="footer-cart">Корзина</span>
+              </a>
+            </li>
+          </ul>
+        </section>
 
-      <section class="footer-services">
-        <h2 class="visually-hidden">Условия покупки</h2>
-        <p class="footer-contacts">
-        г. Москва, ул. Строителей, 15 </p>
-        <ul class="footer-site-navigation">
-          <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="guarantee.html">Гарантия</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-        <p>Тел.: +7 (495) 495-95-95</p>
-      </section>
+        <section class="footer-services">
+          <h2 class="visually-hidden">Условия покупки</h2>
+          <p class="footer-contacts">
+          г. Москва, ул. Строителей, 15 </p>
+          <ul class="footer-site-navigation">
+            <li><a href="delivery.html">Доставка</a></li>
+            <li><a href="guarantee.html">Гарантия</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+          <p>Тел.: +7 (495) 495-95-95</p>
+        </section>
 
-      <section class="footer-social">
-        <h2 class="visually-hidden">Мы в соцсетях</h2>
-        <ul class="social-nets">
-          <li><a class="social-button" href="#">Вконтакте</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
-        </ul>
-      </section>
+        <section class="footer-social">
+          <h2 class="visually-hidden">Мы в соцсетях</h2>
+          <ul class="social-nets">
+            <li><a class="social-button" href="#">Вконтакте</a></li>
+            <li><a class="social-button" href="#">Фейсбук</a></li>
+            <li><a class="social-button" href="#">Инстаграм</a></li>
+          </ul>
+        </section>
 
-      <p class="footer-copyright">
-        <a class="html-button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-      </p>
+        <p class="footer-copyright">
+          <a class="html-button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+        </p>
+      </div>
     </footer>
 
     <section class="write-us">

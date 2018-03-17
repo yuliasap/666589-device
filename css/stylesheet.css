@@ -35,6 +35,12 @@ body {
   background-repeat: no-repeat; 
 }
 
+.main-container{
+  width: 1160px;
+  margin: 0 auto;
+}
+
+
 .visually-hidden{
   position: absolute;
   clip:rect(0 0 0 0);
@@ -64,8 +70,10 @@ a {
   list-style: none;
 }
 /*ХЕДЕР*/
-.main-header{
-  margin: 40px, 140px;
+
+.main-container-header{
+  width: 1160px;
+  margin: 0 auto;
   background-color: #f7e296;
 }
 
@@ -129,7 +137,7 @@ a.main-header-logo{
   display: block;
 }
 
-main-header-start button[type="submit"]:focus{
+.main-header-start button[type="submit"]:focus{
   padding: 16px 19px 17px 17px;
 }
 
@@ -165,7 +173,7 @@ td.table-data{
   letter-spacing: 0.36px;
   padding-bottom: 10px;
   padding-left: 0px;
-  padding-right: 30px;
+  padding-right: 80px;
 }
 
 /*КАТАЛОГ УСТРОЙСТВ*/
@@ -177,11 +185,11 @@ td.table-data{
   font-weight: 700;
 }
 
-.device-catalog a:focus{
-  color: rgba(0, 0, 0, 0.3);
+.device-catalog-content p:focus{
+  color: rgba(0, 0, 0, 0.3); /*Не изменяется прозрачность текста в фокусе???*/
 }
 
-/*Изображение устройства*/
+/*Фон устройства*/
 .device-catalog-content::before{
   display: inline-block;
   width: 160px;
@@ -191,13 +199,20 @@ td.table-data{
   background-position: 50% 50%; 
 }
 
-.device-catalog-content::before:hover{
-  opacity:1; 
+.device-catalog-content:hover::before{
+  background-color: rgba(240,197,46,1); 
+  content:" ";
 }
 
+/*Изображения устройств*/
 .img1::before{
   background-image: url(../img/popular-1.svg);
   background-repeat: no-repeat;
+  content:" ";
+}
+/*Почему прозрачность не поменялась в фокусе???*/
+.img1:focus::before{
+  opacity: 0.3;
   content:" ";
 }
 
@@ -247,6 +262,11 @@ td.table-data{
   background-color: #e5e5e5;
 }
 
+.main-container-slider{
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .transport-companies{
   font-family: "Gilroy", Arial, sans-serif;
   color: #000000;
@@ -293,6 +313,11 @@ td.table-data{
 .main-footer{
   color: #ffffff;
   background-color: #464646;
+}
+
+.main-container-footer{
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .main-footer a{
