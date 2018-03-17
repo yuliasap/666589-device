@@ -35,6 +35,12 @@ body {
   background-repeat: no-repeat; 
 }
 
+.visually-hidden{
+  position: absolute;
+  clip:rect(0 0 0 0);
+  font-size: 0px;
+}
+
 a {
   text-decoration: none;
   color: #000000;
@@ -44,7 +50,7 @@ a {
 .main-catalog-navigation-list,
 .main-catalog-navigation,
 .main-services-navigation,
-.promo-slider-item,
+.promo-slider-list,
 .device-catalog,
 .services-slider,
 .logo-list-content,
@@ -53,12 +59,30 @@ a {
 .footer-site-navigation,
 .social-nets,
 .transport-companies,
-.services-names-list {
+.services-names-list,
+.slide-switches {
   list-style: none;
 }
 
 .main-header{
   background-color: #f7e296;
+}
+
+.main-header a:hover {
+  opacity:0.6;
+}
+.main-header a:focus,
+.main-header a:active {
+  opacity:0.3;
+}
+
+a.main-header-logo{
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .main-navigation {
@@ -72,25 +96,49 @@ a {
 
   background-color: #f7e296;
 }
+/*Форма Найти в хедере*/
+.main-header-start input[type="text"]{
+  font:inherit;
+  color:rgba(0,0,0,0.3);
+  background-color: transparent;
+  border:none;
+}
 
-.promo-slider-item h3{
+.main-header-start input[type="text"]:hover{
+  color:rgba(0,0,0,0.6);
+}
+
+.main-header-start input[type="text"]:focus{
+  color:rgba(0,0,0,1);
+}
+
+.main-header-start input[type="submit"]{
+  font:inherit;
+  border:2px solid #000000;
+  background-color: transparent;
+  display:none; /*Почему Найти отображается все равно?*/
+}
+
+.main-header-start input[type="search"]:focus~  /*Не работает*/
+.main-header-start input[type="submit"]{
+  display:block;
+}
+
+/*Подменю. Почему не работает????*/
+ul.main-catalog-navigation-list{
+  visibility:hidden;
+}
+
+ul.main-catalog-navigation-list:hover{
+  visibility:visible;
+}
+
+.promo-slider-list h3{
   font-family: "Gilroy", Arial, sans-serif;
   color: #000000;
   font-size: 47px;
   line-height: 56px;
   letter-spacing: 0.47px;
-}
-
-a.button{
-  text-align: center;
-  font-family: "Gilroy", Arial, sans-serif;
-  color: #000000;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 3.6px;
-  background-color: #f0c52e;
-  text-transform: uppercase;
-  font-weight: 700;
 }
 
 .device-catalog a{
@@ -99,6 +147,29 @@ a.button{
   line-height: 24px;
   letter-spacing: 0px;
   font-weight: 700;
+}
+
+.device-catalog a:focus{
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.device-catalog-image{
+  display: inline-block;
+  width: 160px;
+  height: 160px;  /*Нельзя задать высоту ?*/
+  background-color: rgba(240,197,46,0.5);
+  background-image: url("img/popular-1.svg"); /*Почему не отображается картинка????*/
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.device-catalog-image:hover,
+.device-catalog-image:focus{
+  background-color: rgba(240,197,46,1);
+}
+
+.another-section{
+  background-color: #e5e5e5;
 }
 
 .transport-companies{
@@ -111,22 +182,63 @@ a.button{
 }
 
 .about-us h2,
-.contacts-map h2{
+.contacts-map h2,
+.services-content h3{
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
   line-height: 48px;
   letter-spacing: 0.47px;
 }
 
-.main-footer a,
+
 .main-footer{
   color: #ffffff;
   background-color: #464646;
 }
 
+.main-footer a{
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 36px;
+  letter-spacing: 0.15px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.main-footer-start a{
+  font:inherit;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 36px;
+  letter-spacing: 0.15px;
+  font-weight: 300;
+}
+
+a.main-footer-logo{
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffc600;
+}
+
+.main-footer a:hover {
+  opacity:0.6;
+}
+.main-footer a:focus {
+  opacity:0.3;
+}
+
 p.footer-contacts{
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
   line-height: 30px;
   letter-spacing: 0px;
+  font-weight: 300;
 }
 
 .footer-site-navigation a{
@@ -138,19 +250,86 @@ p.footer-contacts{
   text-transform: uppercase;
 }
 
-.main-footer-start a{
-  font-size: 15px;
-  line-height: 36px;
+
+
+.write-us {
+   background-color: #ffffff;
+ }
+/*Копки-ссылки*/
+ .button{
+  padding-left:43px;
+  padding-right:43px;
+  padding-top:-2px; /*Как задать высоту кнопки?*/
+  text-align: center;
+  font-family: "Gilroy", Arial, sans-serif;
+  color: #000000;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  background-color: #f0c52e;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-.another-section{
-  background-color: #e5e5e5;
+.button:hover{
+  height:    /*Как задать?*/
 }
 
-.site-navigation a:hover,
-.user-navigation a:hover{
+.button:focus,
+.button:active{
+  color: rgba(0,0,0,0.3);
+  }
 
 
+.wtite-us-item input[type="text"],
+.wtite-us-item input[type="email"],
+.wtite-us-item textarea {
+  font-family: "Open Sans", Arial, sans-serif;
+  color:rgba(0,0,0,0.4);
+  font-size: 14px;
+  line-height: 18px;
 
-  background-color: #242424;
+  background-color: #f2f2f2;
+  border: none;
 }
+
+.wtite-us-item input[type="text"]:hover,
+.wtite-us-item input[type="email"]:hover,
+.wtite-us-item textarea:hover{
+  background-color: #eaeaea;   
+}
+
+.wtite-us-item input[type="text"]:focus,  /*Почему дполнительная серая рамка появляется при нажатии?*/
+.wtite-us-item input[type="email"]:focus,
+.wtite-us-item textarea:focus,
+.wtite-us-item input[type="text"]:active,
+.wtite-us-item input[type="email"]:active,
+.wtite-us-item textarea:active{
+  border: 3px solid #f7e296;
+}
+
+.wtite-us-item label{
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  font-weight: 700;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-copyright .html-button:hover{
+  /*Как поменять прозрачность картики?*/
+}
+
+.footer-copyright .html-button:focus,
+.footer-copyright .html-button:active{
+ /*Как поменять прозрачность картики?*/
+}
+
+
+
+
+
