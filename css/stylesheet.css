@@ -63,7 +63,7 @@ a {
 .slide-switches {
   list-style: none;
 }
-
+/*ХЕДЕР*/
 .main-header{
   background-color: #f7e296;
 }
@@ -96,7 +96,8 @@ a.main-header-logo{
 
   background-color: #f7e296;
 }
-/*Форма Найти в хедере*/
+
+/*ФОРМА НАЙТИ*/
 .main-header-start input[type="text"]{
   width: 354px;
   padding-left: 40px;
@@ -128,7 +129,8 @@ a.main-header-logo{
   display: block;
 }
 
-/*Подменю. Почему не показыватся подменю при наведении????*/
+/*ПОДМЕНЮ*/
+/*Почему не показыватся подменю при наведении????*/
 ul.main-catalog-navigation-list{
   visibility:hidden;
 }
@@ -137,6 +139,7 @@ li.top:hover ul.main-catalog-navigation-list{
   visibility:visible;
 }
 
+/*СЛАЙДЕР*/
 .promo-slider-list h3{
   font-family: "Gilroy", Arial, sans-serif;
   color: #000000;
@@ -145,6 +148,7 @@ li.top:hover ul.main-catalog-navigation-list{
   letter-spacing: 0.47px;
 }
 
+/*КАТАЛОГ УСТРОЙСТВ*/
 .device-catalog a{
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
@@ -174,6 +178,7 @@ li.top:hover ul.main-catalog-navigation-list{
   background-color: rgba(240,197,46,1);
 }
 
+/*СЛАЙДЕР-2*/
 .another-section{
   background-color: #e5e5e5;
 }
@@ -208,6 +213,7 @@ li.top:hover ul.main-catalog-navigation-list{
   filter: none; /* IE 6-9 */
 }
 
+/*КОНТАКТЫ*/
 
 .about-us h2,
 .contacts-map h2,
@@ -218,6 +224,7 @@ li.top:hover ul.main-catalog-navigation-list{
   letter-spacing: 0.47px;
 }
 
+/*ФУТТЕР*/
 
 .main-footer{
   color: #ffffff;
@@ -243,7 +250,7 @@ li.top:hover ul.main-catalog-navigation-list{
   letter-spacing: 0.15px;
   font-weight: 300;
 }
-
+ /*ЛОГОТИП*/
 a.main-footer-logo{
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 48px;
@@ -278,12 +285,21 @@ p.footer-contacts{
   text-transform: uppercase;
 }
 
+.footer-social {
+  text-align: center;
+}
+
+.footer-copyright .html-button:hover{
+  /*Как поменять прозрачность картики?*/
+}
+
+.footer-copyright .html-button:focus,
+.footer-copyright .html-button:active{
+ /*Как поменять прозрачность картики?*/
+}
 
 
-.write-us {
-   background-color: #ffffff;
- }
-/*Копки-ссылки*/
+/*КНОПКИ-ССЫЛКИ*/
  .button{
   padding-left:43px;
   padding-right:43px;
@@ -302,17 +318,16 @@ p.footer-contacts{
 }
 
 .button:hover{
-  height:    /*Как задать?*/
+  height:    /*Как задать вытоту кнопки при наведении?*/
 }
-
 .button:focus,
 .button:active{
   opacity: 0.3;
 }
 
-/*Кнопки*/
+/*КНОПКИ*/
 
-/*Не задается стл для кнопок Доставка, Гарантия, Кредит*/
+/*Как задать высоту кнопок при наведении*/
 
 .services-names-list button{
   width: 160px;
@@ -329,6 +344,7 @@ button.button-services-slider{
   padding-left: 25px;
   padding-right: 25px;
 }
+
 button.button-services-slider-current{
   width: 280px;
   text-align: left;
@@ -337,8 +353,25 @@ button.button-services-slider-current{
   background-color: #000000;
 }
 
+button.button-services-slider:hover{
+  /*Как правильно задать ширину кнопок?*/
+}
 
+button.button-services-slider:focus,
+button.button-services-slider:active{  /*Как правильно задать ширину кнопок?*/
+  width: 280px;
+  /*Почему по центу текст при нажатии*/
+  padding-left: 25px;
+  color:#f7e184;
+  background-color: #000000;
+}
 
+  
+
+/*ФОРМА*/
+.write-us {
+   background-color: #ffffff;
+ }
 .wtite-us-item input[type="text"],
 .wtite-us-item input[type="email"],
 .wtite-us-item textarea {
@@ -349,6 +382,15 @@ button.button-services-slider-current{
 
   background-color: #f2f2f2;
   border: none;
+}
+
+.wtite-us-item input[type="text"],
+.wtite-us-item input[type="email"]{
+  width: 360px;
+}
+
+.wtite-us-item textarea {
+  width: 760px;
 }
 
 .wtite-us-item input[type="text"]:hover,
@@ -375,18 +417,7 @@ button.button-services-slider-current{
   font-weight: 700;
 }
 
-.footer-social {
-  text-align: center;
-}
 
-.footer-copyright .html-button:hover{
-  /*Как поменять прозрачность картики?*/
-}
-
-.footer-copyright .html-button:focus,
-.footer-copyright .html-button:active{
- /*Как поменять прозрачность картики?*/
-}
 
 
 
