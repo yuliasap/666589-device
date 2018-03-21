@@ -506,7 +506,137 @@ button.button-services-slider:active{  /*Как правильно задать 
   font-weight: 700;
 }
 
+/*КАТАЛОГ*/
 
+.page-title {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  letter-spacing: 0,47px;
+  font-weight: 700;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a,
+.breadcrumbs-current{
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.14px;
+  font-weight: 300;
+  opacity: 0.3;
+}
+
+.breadcrumbs a:hover{
+  opacity: 0.6;
+}
+
+.breadcrumbs a:focus{
+  opacity: 0.1;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+  font-weight: 700;
+}
+
+.filter ul {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 40px;
+  letter-spacing: 0.14px;
+  list-style: none;
+}
+
+.filter-input:disabled + label {
+  color: #a6a6a6;  
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item__picture-wrap {
+  background-color: #efefef;
+}
+
+.catalog-item:hover {
+  opacity:0.7; /*Прозрачность картинки как задать?*/
+}
+
+.catalog-item__content h3 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+  font-weight: 700;
+}
+
+.catalog-item__price p {
+  font-family: "Gilroy", Arial, sans-serif;/*Шрифт подключен ли?*/
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  text-align: center;
+  color: #464646;
+}
+
+button.button {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  font-weight: 700;
+}
+
+button.button-compare{
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 36px;
+  letter-spacing: 0.13px;
+  border: none;
+  opacity: 0.5;
+  background: none;
+  display:block;
+}
+
+.catalog-item:hover + button[type="submit"]{
+  display:block; /*Не работает?*/
+}
+
+.pagination{
+  background: #ebebeb;
+}
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a,
+.button-back {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 3.2px;
+  opacity: 0.3;
+}
+
+.forward-before a,
+span.button-back{
+  opacity: 1;
+  text-transform: uppercase;
+  font-weight: 700;
+}
 
 
 
