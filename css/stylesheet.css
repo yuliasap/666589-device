@@ -33,11 +33,12 @@ body {
   background-color: #ffffff;
   background-position: top center;
   background-repeat: no-repeat; 
+  
 }
 
 .main-container{
-  width: 1160px;
-  margin: 0 auto;
+  width: 100%;
+  /*background-color: #ffffff;*/
 }
 
 
@@ -72,26 +73,49 @@ a {
 /*ХЕДЕР*/
 
 .main-container-header{
+  display:flex;
+  flex-direction:column;
   width: 1160px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  min-height: 300px;
   margin: 0 auto;
+  margin-top: 40px;
   background-color: #f7e296;
+  margin-bottom: -110px;
 }
 
-.main-header a:hover {
+.main-container-header .main-header-start{
+  display: flex;
+}
+
+.main-container-header a:hover {
   opacity:0.6;
 }
-.main-header a:focus,
-.main-header a:active {
+.main-container-header a:focus,
+.main-container-header a:active {
   opacity:0.3;
 }
 
 a.main-header-logo{
+  position: absolute;
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 48px;
   line-height: 48px;
   letter-spacing: 0.48px;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.user-navigation{
+  display: flex;
+  width: 520px;
+  margin:0;
+  padding: 0;
+}
+
+.user-link {
+
 }
 
 .main-navigation {
@@ -103,7 +127,30 @@ a.main-header-logo{
   text-transform: uppercase;
   font-weight: 700;
 
-  background-color: #f7e296;
+  /*background-color: #f7e296;*/
+}
+
+.main-catalog-navigation{
+  width: 1040px;
+  margin:0;
+  padding: 0;
+}
+
+.main-catalog-navigation-list{
+  width: 600px;
+}
+
+.main-services-navigation{
+  margin:0;
+  padding: 0;
+}
+.search-form{
+  width: 500px;
+}
+
+.main-header-start{
+  width: 1040px;
+  min-height: 80px;
 }
 
 /*ФОРМА НАЙТИ*/
@@ -151,33 +198,237 @@ li.top:hover ul.main-catalog-navigation-list{
 }
 
 /*СЛАЙДЕР*/
+.promo-slider{
+  position: relative;
+  width: 1160px;
+  padding: 0;
+  min-height: 500px; /*временно*/
+  margin:0 auto;
+  /*border:2px dotted black;*/
+  box-sizing: border-box;
+  margin-bottom: 90px;
+}
+
+.promo-slider-list{
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+}
+
+.promo-slider-list > li {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .promo-slider-list h3{
-  font-family: "Gilroy", Arial, sans-serif;
+  font-family: "gilroyextrabold", Arial, sans-serif;
   color: #000000;
   font-size: 47px;
   line-height: 56px;
   letter-spacing: 0.47px;
 }
 
+.promo-slider-item{
+  border-collapse: collapse;
+}
+
+
 td.table-title{
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 20px;
   letter-spacing: 0.13px;
+  padding: 0;
 }
 
 td.table-data{
-  font-family: "Gilroy", Arial, sans-serif;;
+  font-family: "gilroylight", Arial, sans-serif;;
   font-size: 36px;
   line-height: 48px;
   letter-spacing: 0.36px;
-  padding-bottom: 10px;
-  padding-left: 0px;
-  padding-right: 80px;
+  padding: 0 0 8px 0;
 }
 
+table.promo-slider-item td:nth-child(1) {
+  width: 160px;
+}
+
+table.promo-slider-item td:nth-child(2) {
+  width: 140px;
+}
+
+
+.slide{
+  display: flex;
+  /*position: absolute;*/
+  /*top:0;*/
+  /*left:600px;Почему не в самом углу заголовок?*/
+  /*width: 100%
+  height:100%;
+  background-color:rgba(255,255,0,0.1);*/
+}
+
+.slide-photo{
+  box-sizing: border-box;
+  width: 580px;
+  min-height: 500px;
+  text-align: center;
+}
+
+.slide-text{
+  box-sizing: border-box;
+  width: 580px;
+  padding: 77px 0 0 20px;
+}
+
+.slide-text h3{
+  /*padding-top: 80px;*/
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.slide-text p{
+  margin-top: 0px;
+  margin-bottom: 41px;
+}
+
+.slide-text a {
+  margin-bottom: 48px;
+}
+
+.button {
+  position: relative;
+  z-index: 2;
+  
+  width: 220px;
+  height: 42px;
+  display: block;
+  
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 42px;  
+  letter-spacing: 3.6px;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  
+  background: transparent;
+  border: none;
+  
+  cursor: pointer;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 4px);
+  z-index: -1;
+  left: 0;
+  right: 0;
+  
+  display: block;
+  height: 8px;
+  
+  background: #f0c52e;
+  
+  transition: .5s;
+}
+.button:hover::before,
+.button:active::before {
+  top: 0;
+  bottom: 0;
+  
+  height: 100%;
+}
+.button:active {
+  color: rgba(0, 0, 0, .3);
+}
+/*.slide .button{
+  display: block;
+  top: 316px;
+  left: 0px;
+  width: 220px;
+  margin-top:60px;
+  text-align: center;
+  font-family: "Gilroy", Arial, sans-serif;
+  color: #000000;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  background-color: #f0c52e;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+}*/
+
+/*Переключатель слайдов*/
+.promo-slider input[type="radio"]{
+  display: none;
+}
+
+.slider-controls{
+  position: absolute;
+  top: 325px;
+  right: 0px;
+  width: 162px;
+  height: 12px;
+  /*text-align: center;*/
+  /*outline:1px dotted green;*/
+  z-index: 50;
+}
+/*Рисуем кружок*/
+.slider-controls label{
+  box-sizing: border-box;
+  display:inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 17px;
+
+  background: white;
+  border: 1px solid black;
+  vertical-align: top;
+  border-radius: 50%;
+  cursor:pointer;
+}
+
+.slider-controls .active{
+  background-image: url("../img/slider-bu.svg");
+
+}
+
+
+/*Отключение 2 и 3его слайдера, временно*/
+.promo-slider-list li:nth-child(2){
+  display:none;
+}
+
+.promo-slider-list li:nth-child(3){
+  display:none;
+}
+
+
 /*КАТАЛОГ УСТРОЙСТВ*/
-.device-catalog a{
+
+.device-catalog{
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.device-catalog-item{
+  width: 160px;
+}
+
+.device-catalog-navigation{
+  width: 1160px;
+  margin:0 auto;
+  margin-bottom: 164px;
+}
+
+.device-catalog-item a{
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -185,61 +436,64 @@ td.table-data{
   font-weight: 700;
 }
 
-.device-catalog-content p:focus{
+.device-catalog-item a:focus{
   color: rgba(0, 0, 0, 0.3); /*Не изменяется прозрачность текста в фокусе???*/
 }
 
 /*Фон устройства*/
 .device-catalog-content::before{
-  display: inline-block;
+  display: block;
   width: 160px;
   height: 160px;  
   background-color: rgba(240,197,46,0.5);
   background-repeat: no-repeat;
   background-position: 50% 50%; 
+  content:" ";
+  margin-bottom: 0;
+}
+
+.device-catalog-content p{
+  margin-top:33px;
 }
 
 .device-catalog-content:hover::before{
-  background-color: rgba(240,197,46,1); 
+  background-color: rgba(240,197,46,1);
   content:" ";
 }
 
-/*Изображения устройств*/
-.img1::before{
-  background-image: url(../img/popular-1.svg);
-  background-repeat: no-repeat;
-  content:" ";
+.device-catalog-item a:focus .img-1::before {
+  background-image: url("../img/popular-1-grey.svg");
+}
+
+.img-1::before{
+  background-image: url("../img/popular-1.svg");
+  
 }
 /*Почему прозрачность не поменялась в фокусе???*/
-.img1:focus::before{
-  opacity: 0.3;
-  content:" ";
+.img-1:focus::before{
+  /*opacity: 0.3;*/
+  /*background-image: url("../img/popular-1-grey.svg");*/
 }
 
-.img2::before{
-  background-image: url(../img/popular-2.svg);
-  content:" ";
+.img-2::before{
+  background-image: url("../img/popular-2.svg");
   background-position: 50% 97%;
 }
 
-.img3::before{
-  background-image: url(../img/popular-3.svg);
-  content:" ";
+.img-3::before{
+  background-image: url("../img/popular-3.svg");
 }
 
-.img4::before{
-  background-image: url(../img/popular-4.svg);
-  content:" ";
+.img-4::before{
+  background-image: url("../img/popular-4.svg");
 }
 
-.img5::before{
-  background-image: url(../img/popular-5.svg);
-  content:" ";
+.img-5::before{
+  background-image: url("../img/popular-5.svg");
 }
 
-.img6::before{
-  background-image: url(../img/popular-6.svg);
-  content:" ";
+.img-6::before{
+  background-image: url("../img/popular-6.svg");
 }
 /*.device-catalog-image{
   display: inline-block;
@@ -250,21 +504,48 @@ td.table-data{
   background-image: url(../img/popular-1.svg); 
   background-repeat: no-repeat;
   background-position: 0 0;
-}*/
+}
 
 .device-catalog-image:hover,
 .device-catalog-image:focus{
   background-color: rgba(240,197,46,1);
-}
+}*/
 
 /*СЛАЙДЕР-2*/
-.another-section{
-  background-color: #e5e5e5;
+
+.services-names-list{
+  margin: 0;
+  padding: 0;
 }
 
+.services-slider{
+  margin: 0;
+  padding: 0;
+}
+
+.another-section{
+  background-color: rgba(229, 229, 229, 0.3);
+  /*background-color: #e5e5e5;*/
+  
+}
+
+
 .main-container-slider{
+  display: flex;
   width: 1160px;
   margin: 0 auto;
+}
+
+.services-content{
+  width: 876px;
+}
+
+.services-names{
+  width: 284px;
+  height: 320px;
+  box-sizing: border-box;
+  border-right: 7px solid black;
+  padding-top: 80px;
 }
 
 .transport-companies{
@@ -276,9 +557,47 @@ td.table-data{
   font-weight: 700;
 }
 
+.button--slider {
+  width: 160px;
+  margin-bottom: 24px;
+} 
+
+.button--slider:active {
+  color: #f7e184;
+  
+  background: #000;
+}
+
+.button--slider:active::after {
+  content: "";
+  
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -120px;
+  
+  display: block;
+  width: 120px;
+  
+  background: #000;
+}
+/*Временно*/
+.services-slider li:nth-child(2){
+  display: none;
+}
+
+.services-slider li:nth-child(3){
+  display: none;
+}
+
 /*КАРТИНКИ БРЕНДОВ*/
 
 /*Фильтр для цветных картинок*/
+.logo-list{
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .logo-list-content img{
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
@@ -298,6 +617,10 @@ td.table-data{
 }
 
 /*КОНТАКТЫ*/
+.index-columns{
+  width: 1160px;
+  margin: 0 auto;
+}
 
 .about-us h2,
 .contacts-map h2,
@@ -389,11 +712,9 @@ p.footer-contacts{
 
 
 /*КНОПКИ-ССЫЛКИ*/
- .button{
+/* .button{
   padding-left:43px;
   padding-right:43px;
-  /*Как задать высоту кнопки?*/
-  padding-top:-2px; 
   text-align: center;
   font-family: "Gilroy", Arial, sans-serif;
   color: #000000;
@@ -407,53 +728,15 @@ p.footer-contacts{
 }
 
 .button:hover{
-  height:    /*Как задать вытоту кнопки при наведении?*/
+  height:    
 }
 .button:focus,
 .button:active{
   opacity: 0.3;
-}
+}*/
 
-/*КНОПКИ*/
 
-/*Как задать высоту кнопок при наведении*/
 
-.services-names-list button{
-  width: 160px;
-  font-family: "Gilroy", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  text-transform: uppercase;
-  font-weight: 700;
-  border: none;
-}
-button.button-services-slider{
-  background-color: #f0c52e;
-  /*Как правильно задать ширину кнопок?*/
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-button.button-services-slider-current{
-  width: 280px;
-  text-align: left;
-  padding-left: 19px;
-  color:#f7e184;
-  background-color: #000000;
-}
-
-button.button-services-slider:hover{
-  /*Как правильно задать ширину кнопок?*/
-}
-
-button.button-services-slider:focus,
-button.button-services-slider:active{  /*Как правильно задать ширину кнопок?*/
-  width: 280px;
-  /*Почему по центу текст при нажатии*/
-  padding-left: 25px;
-  color:#f7e184;
-  background-color: #000000;
-}
 
   
 
@@ -639,6 +922,20 @@ span.button-back{
 }
 
 
+/*----Сеточные стили--------*/
+
+html,
+body{
+  min-width: 1122px;
+  min-height: 3000px;
+}
+
+body{
+  /*ВРЕМЕННО ДЛЯ СЕТКИ*/
+  background-image: url("../img/device-index.jpg");
+  /*background-size: 1440px auto;*/
+  background-repeat: no-repeat;
+}
 
 
 
