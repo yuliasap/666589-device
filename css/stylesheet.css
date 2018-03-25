@@ -300,7 +300,6 @@ table.promo-slider-item td:nth-child(2) {
 
 .button {
   position: relative;
-  z-index: 2;
   
   width: 220px;
   height: 42px;
@@ -469,47 +468,48 @@ table.promo-slider-item td:nth-child(2) {
   background-image: url("../img/popular-1.svg");
   
 }
-/*Почему прозрачность не поменялась в фокусе???*/
-.img-1:focus::before{
-  /*opacity: 0.3;*/
-  /*background-image: url("../img/popular-1-grey.svg");*/
-}
 
 .img-2::before{
   background-image: url("../img/popular-2.svg");
   background-position: 50% 97%;
 }
 
+.device-catalog-item a:focus .img-2::before {
+  background-image: url("../img/popular-2-grey.svg");
+}
+
 .img-3::before{
   background-image: url("../img/popular-3.svg");
+}
+
+.device-catalog-item a:focus .img-3::before {
+  background-image: url("../img/popular-3-grey.svg");
 }
 
 .img-4::before{
   background-image: url("../img/popular-4.svg");
 }
 
+.device-catalog-item a:focus .img-4::before {
+  background-image: url("../img/popular-4-grey.svg");
+}
+
 .img-5::before{
   background-image: url("../img/popular-5.svg");
+}
+
+.device-catalog-item a:focus .img-5::before {
+  background-image: url("../img/popular-5-grey.svg");
 }
 
 .img-6::before{
   background-image: url("../img/popular-6.svg");
 }
-/*.device-catalog-image{
-  display: inline-block;
-  width: 160px;
-  height: 160px;  
-  background-color: rgba(240,197,46,0.5);
-  
-  background-image: url(../img/popular-1.svg); 
-  background-repeat: no-repeat;
-  background-position: 0 0;
+
+.device-catalog-item a:focus .img-6::before {
+  background-image: url("../img/popular-6-grey.svg");
 }
 
-.device-catalog-image:hover,
-.device-catalog-image:focus{
-  background-color: rgba(240,197,46,1);
-}*/
 
 /*СЛАЙДЕР-2*/
 
@@ -521,14 +521,26 @@ table.promo-slider-item td:nth-child(2) {
 .services-slider{
   margin: 0;
   padding: 0;
+  padding-left: 117px;
 }
 
 .another-section{
   background-color: rgba(229, 229, 229, 0.3);
+  height: 288px;
+  margin-bottom: 94px;
   /*background-color: #e5e5e5;*/
   
 }
 
+.services-content h3{
+  margin-top:0;
+  padding: 0;
+  margin-bottom: 31px;
+}
+
+.services-content p{
+  margin: 0;
+}
 
 .main-container-slider{
   display: flex;
@@ -538,14 +550,16 @@ table.promo-slider-item td:nth-child(2) {
 
 .services-content{
   width: 876px;
+  transform: translateY(-26px);
 }
 
 .services-names{
-  width: 284px;
-  height: 320px;
+  width: 284px;  
   box-sizing: border-box;
   border-right: 7px solid black;
   padding-top: 80px;
+  padding-bottom: 45px;
+  transform: translateY(-102px);
 }
 
 .transport-companies{
@@ -559,16 +573,17 @@ table.promo-slider-item td:nth-child(2) {
 
 .button--slider {
   width: 160px;
-  margin-bottom: 24px;
+  margin-bottom: 23px;
+  outline: none;
 } 
 
-.button--slider:active {
+.button--slider:active{
   color: #f7e184;
   
-  background: #000;
+  background: #000000;
 }
 
-.button--slider:active::after {
+.button--slider:active::after{
   content: "";
   
   position: absolute;
@@ -594,8 +609,16 @@ table.promo-slider-item td:nth-child(2) {
 
 /*Фильтр для цветных картинок*/
 .logo-list{
+
   width: 1160px;
   margin: 0 auto;
+}
+
+.logo-list-content{
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .logo-list-content img{
@@ -607,14 +630,16 @@ table.promo-slider-item td:nth-child(2) {
   filter: gray; /* IE 6-9 */
 }
 
-.logo-list-content img:hover {
+.logo-list-content img:hover{
   -webkit-filter: none;
   -moz-filter: none;
   -ms-filter: none;
   -o-filter: none;
   filter: none;
-  filter: none; /* IE 6-9 */
+  /*filter: none;  /*IE 6-9 */
 }
+
+
 
 /*КОНТАКТЫ*/
 .index-columns{
@@ -709,33 +734,6 @@ p.footer-contacts{
 .footer-copyright .html-button:active{
  /*Как поменять прозрачность картики?*/
 }
-
-
-/*КНОПКИ-ССЫЛКИ*/
-/* .button{
-  padding-left:43px;
-  padding-right:43px;
-  text-align: center;
-  font-family: "Gilroy", Arial, sans-serif;
-  color: #000000;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 3.6px;
-  background-color: #f0c52e;
-  text-transform: uppercase;
-  font-weight: 700;
-  border: none;
-}
-
-.button:hover{
-  height:    
-}
-.button:focus,
-.button:active{
-  opacity: 0.3;
-}*/
-
-
 
 
   
