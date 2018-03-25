@@ -629,7 +629,7 @@ table.promo-slider-item td:nth-child(2) {
 /*КОНТАКТЫ*/
 .index-columns{
   display: flex;
-  min-height: 590px;
+  min-height: 460px;
   justify-content: space-between;
   width: 1160px;
   margin: 0 auto;
@@ -704,15 +704,34 @@ table.promo-slider-item td:nth-child(2) {
   margin-top: 80px;
   min-height: 322px;
   color: #ffffff;
-  background-color: #464646;
+  background-color: rgba(70,70,70,0.3);
+}
+
+.main-footer-start{
+  padding-top: 12px;
+  margin-bottom: 35px;
+}
+
+.footer-services{
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
 }
 
 .footer-user-navigation{
+  display: flex;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
 }
 
 .footer-site-navigation{
+  margin: 0;
+  padding: 0;
+  width: 440px;
+}
+
+.social-nets{
   margin: 0;
   padding: 0;
 }
@@ -765,6 +784,15 @@ p.footer-contacts{
   line-height: 30px;
   letter-spacing: 0px;
   font-weight: 300;
+  margin: 0;
+}
+
+p.footer-copyright{
+  margin: 0;
+}
+
+.footer-services p{
+  margin: 0;
 }
 
 .footer-site-navigation a{
@@ -777,7 +805,7 @@ p.footer-contacts{
 }
 
 .footer-social {
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .footer-copyright .html-button:hover{
