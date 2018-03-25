@@ -344,23 +344,7 @@ table.promo-slider-item td:nth-child(2) {
 .button:active {
   color: rgba(0, 0, 0, .3);
 }
-/*.slide .button{
-  display: block;
-  top: 316px;
-  left: 0px;
-  width: 220px;
-  margin-top:60px;
-  text-align: center;
-  font-family: "Gilroy", Arial, sans-serif;
-  color: #000000;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 3.6px;
-  background-color: #f0c52e;
-  text-transform: uppercase;
-  font-weight: 700;
-  border: none;
-}*/
+
 
 /*Переключатель слайдов*/
 .promo-slider input[type="radio"]{
@@ -393,7 +377,7 @@ table.promo-slider-item td:nth-child(2) {
 }
 
 .slider-controls .active{
-  background-image: url("../img/slider-bu.svg");
+  /*background-image: url("../img/slider-bu.svg");*/
 
 }
 
@@ -612,6 +596,7 @@ table.promo-slider-item td:nth-child(2) {
 
   width: 1160px;
   margin: 0 auto;
+  margin-bottom: 140px;
 }
 
 .logo-list-content{
@@ -643,24 +628,93 @@ table.promo-slider-item td:nth-child(2) {
 
 /*КОНТАКТЫ*/
 .index-columns{
+  display: flex;
+  min-height: 590px;
+  justify-content: space-between;
   width: 1160px;
   margin: 0 auto;
+}
+
+.transport-companies{
+  margin: 0;
+  padding: 0;
+  transform: translateX(29px);
+  margin-bottom: 60px;
 }
 
 .about-us h2,
 .contacts-map h2,
 .services-content h3{
-  font-family: "Gilroy", Arial, sans-serif;
+  margin: 0 0 33px 0;
+  padding: 0;
+  margin-bottom: 33px;
+  font-family: 'gilroyextrabold', Arial, sans-serif;
   font-size: 47px;
   line-height: 48px;
   letter-spacing: 0.47px;
 }
 
+.about-us{
+  width: 500px;
+  min-height: 460px;
+}
+
+.about-us p,
+.contacts-map p{
+  font-family: 'gilroylight', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.about-us .p1{
+  margin-bottom: 30px;
+}
+
+.about-us p{
+  margin-bottom: 64px;
+}
+
+.contacts-map img{
+  margin-bottom: 57px;
+}
+
+.index-columns .button{
+  width: 260px;
+
+}
+
+.contacts-map{
+  width: 560px;
+}
+
+.contacts-map p{
+  margin-bottom: 46px;
+}
+
+.contacts-map figure{
+  margin: 0;
+}
+
 /*ФУТТЕР*/
 
 .main-footer{
+  margin-top: 80px;
+  min-height: 322px;
   color: #ffffff;
   background-color: #464646;
+}
+
+.footer-user-navigation{
+  margin: 0;
+  padding: 0;
+}
+
+.footer-site-navigation{
+  margin: 0;
+  padding: 0;
 }
 
 .main-container-footer{
