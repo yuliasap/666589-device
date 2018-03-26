@@ -81,12 +81,14 @@ a {
   min-height: 300px;
   margin: 0 auto;
   margin-top: 40px;
-  background-color: #f7e296;
+  /*background-color: #f7e296;*//*ВРЕМЕННО*/
+  background-color: rgba(247,226,150,0.3);/*ВРЕМЕННО*/
   margin-bottom: -110px;
 }
 
 .main-container-header .main-header-start{
   display: flex;
+  justify-content: flex-end;
 }
 
 .main-container-header a:hover {
@@ -109,21 +111,23 @@ a.main-header-logo{
 
 .user-navigation{
   display: flex;
+  justify-content: flex-end;
   width: 520px;
   margin:0;
   padding: 0;
 }
 
-.user-link {
-
-}
 
 .main-navigation {
+  display: flex;
+  width: 1040px;
+  margin: 0 auto;
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: #000000;
   letter-spacing: 3.6px;
+  font-weight: 300;
   text-transform: uppercase;
   font-weight: 700;
 
@@ -136,13 +140,13 @@ a.main-header-logo{
   padding: 0;
 }
 
-.main-catalog-navigation-list{
-  width: 600px;
-}
 
 .main-services-navigation{
-  margin:0;
+  display: flex;
+  width: 500px;
+  /*margin:0;*/
   padding: 0;
+  margin: 0 auto;
 }
 .search-form{
   width: 500px;
@@ -150,45 +154,89 @@ a.main-header-logo{
 
 .main-header-start{
   width: 1040px;
-  min-height: 80px;
+  margin: 0 auto;
+  padding-top: 43px;
+  margin-bottom: 27px;
+  /*min-height: 80px;*/
 }
 
 /*ФОРМА НАЙТИ*/
-.main-header-start input[type="text"]{
-  width: 354px;
-  padding-left: 40px;
+
+.search-form input {
+  display: block; 
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 42px;
+  width: 353px;
+  padding-left: 20px;
+  float: left;
+  background: #f7e296;
+
   background-image: url(../img/search.svg);
-  opacity: 0.3;
-  background-color: transparent;
   background-repeat: no-repeat;
-  outline:none;
-  border:none; 
+  background-position: left;
+  border: 2px solid transparent;
+  outline: none;
 }
-
-.main-header-start input[type="text"]:hover{
-  opacity: 0.6;
-}
-
-.main-header-start input[type="text"]:focus{
-  opacity: 1;
-  border-bottom:2px solid #000000;
-}
-
-.main-header-start button[type="submit"]{
-  border:2px solid #000000;
-  background-color: transparent;
+.search-form button {
   display: none;
+  float: left;
+  width: 85px;
+  height: 48px;
+  
+  line-height: 44px;
+  text-align: center;
+  
+  background: transparent;
+  
+  border: 2px solid #000;
+  outline: none;
 }
-
-.main-header-start input[type="text"]:focus + button[type="submit"]{
+.search-form input:focus {
+  border-bottom-color: #000;
+}
+.search-form input:focus + button {
   display: block;
 }
-
-.main-header-start button[type="submit"]:focus{
-  padding: 16px 19px 17px 17px;
+.search-form button:hover {
+  display: block;
+  
+  color: #fff;
+  
+  background: #000;
+}
+.search-form button:active {
+  color: rgba(255, 255, 255, .3);
 }
 
+
 /*ПОДМЕНЮ*/
+
+.main-catalog-navigation-list{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 1100px;
+  min-height: 160px;
+  background-color: #f7e184;
+  
+  z-index: 1000;
+}
+
+.main-catalog-navigation-list a{
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 300;
+  color: #000000;
+  letter-spacing: 0.15px;
+  text-transform: none;
+  width: 600px;
+
+}
+
 ul.main-catalog-navigation-list{
   visibility:hidden;
 }
@@ -509,7 +557,7 @@ table.promo-slider-item td:nth-child(2) {
 }
 
 .another-section{
-  background-color: rgba(229, 229, 229, 0.3);
+  background-color: rgba(229, 229, 229, 0.3); /*ВРЕМЕННО*/
   height: 288px;
   margin-bottom: 94px;
   /*background-color: #e5e5e5;*/
@@ -580,6 +628,27 @@ table.promo-slider-item td:nth-child(2) {
   
   background: #000;
 }
+
+.button-current{
+  color: #f7e184;
+  
+  background: #000000;
+}
+
+.button-current::after{
+  content: "";
+  
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -120px;
+  
+  display: block;
+  width: 120px;
+  
+  background: #000;
+}
+
 /*Временно*/
 .services-slider li:nth-child(2){
   display: none;
