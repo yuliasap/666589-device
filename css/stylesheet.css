@@ -41,11 +41,22 @@ body {
   /*background-color: #ffffff;*/
 }
 
-
-.visually-hidden{
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
-  clip:rect(0 0 0 0);
-  font-size: 0px;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 a {
@@ -111,12 +122,60 @@ a.main-header-logo{
 
 .user-navigation{
   display: flex;
-  justify-content: flex-end;
-  width: 520px;
+  /*justify-content: flex-end;*/
+  width: 500px;
   margin:0;
   padding: 0;
 }
 
+.user-navigation a,
+.main-navigation a,
+.cart a{
+  display: block;
+}
+
+.user-link{
+  display: flex;
+  width: 100px;
+  margin-right: 180px;
+}
+
+.cart a{
+  padding-left: 40px;
+}
+
+.cart::before {
+  content: "";
+
+  position: absolute;
+  top: 9px;
+  left: 17px;
+  
+  width: 14px;
+  height: 14px;
+  
+  background-image: url("../img/cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.cart:hover::before{
+  opacity: 0.8;
+}
+
+.cart:focus::before,
+.cart:active::before{
+  opacity: 0.3;
+}
+
+.compare{
+  width: 120px;
+}
+
+.cart{
+  position: relative;
+  width: 100px;
+}
 
 .main-navigation {
   display: flex;
@@ -213,14 +272,39 @@ a.main-header-logo{
 
 /*ПОДМЕНЮ*/
 
+.col-items{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.col{
+  margin-right: 40px;
+}
+
+.col1{
+  width: 200px;
+}
+.col2{
+  width: 160px;
+}
+
+.col3{
+  width: 160px;
+}
+
+
+
 .main-catalog-navigation-list{
+  display: flex;
   position: absolute;
   margin: 0;
   padding: 0;
-  display: flex;
   width: 1100px;
-  min-height: 160px;
+  min-height: 143px;
   background-color: #f7e184;
+  opacity: 0.5;/*ВРЕМЕННО ДЛЯ СЕТКИ*/
+  padding-top: 20px;
   
   z-index: 1000;
 }
@@ -1047,7 +1131,7 @@ button.modal-close:focus{
 }
 
 .write-us{
-  /*display: none;*/
+  display: none;
 }
 
 /*КАРТА*/
@@ -1215,7 +1299,7 @@ body{
 
 body{
   /*ВРЕМЕННО ДЛЯ СЕТКИ*/
-  background-image: url("../img/device-index.jpg");
+  background-image: url("../img/device-index-menu.jpg");
   /*background-size: 1440px auto;*/
   background-repeat: no-repeat;
 }
