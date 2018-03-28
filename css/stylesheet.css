@@ -917,57 +917,160 @@ p.footer-contacts{
  /*Как поменять прозрачность картики?*/
 }
 
-
-  
-
 /*ФОРМА*/
-.write-us {
-   background-color: #ffffff;
- }
-.wtite-us-item input[type="text"],
-.wtite-us-item input[type="email"],
-.wtite-us-item textarea {
+.write-us{
+  position: fixed;
+  background-color: #ffffff;
+  left: 50%;
+  top: 50%;
+
+  width: 760px;
+  margin-left:-480px;
+  /*height: 550px;*/
+  padding: 70px 100px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5); /*Как снять параметры тени?*/
+}
+
+
+
+.modal-close{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 25px;
+  right: 22px;
+  font-size: 0;
+  background-color: transparent;
+  border:none;
+  background-image: url("../img/modal-close.svg");
+  position: 50% 50%;
+  background-repeat: no-repeat;
+  outline: none;
+  cursor: pointer;
+}
+
+.write-us-form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.wtite-us-item{
+  padding: 0;
+  margin: 0;
+  margin-bottom: 35px;
+  width: 360px;
+}
+
+.wtite-us-text{
+  margin: 0;
+  margin-bottom: 40px;
+  width: 760px;
+}
+
+.wtite-us-item label,
+.wtite-us-text label{
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+.wtite-us-text textarea{
+  margin: 0;
+  padding: 0;
+  width: 760px;
+  padding-top: 12px;
+  padding-left: 20px;
+}
+
+.wtite-us-item input,
+.wtite-us-text textarea {
+  box-sizing: border-box;
   font-family: "Open Sans", Arial, sans-serif;
   color:rgba(0,0,0,0.4);
   font-size: 14px;
   line-height: 18px;
+  outline: none;
 
   background-color: #f2f2f2;
-  border: none;
 }
 
-.wtite-us-item input[type="text"],
-.wtite-us-item input[type="email"]{
+.wtite-us-item input{
   width: 360px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  border:3px solid transparent;
 }
 
-.wtite-us-item textarea {
-  width: 760px;
-}
-
-.wtite-us-item input[type="text"]:hover,
-.wtite-us-item input[type="email"]:hover,
-.wtite-us-item textarea:hover{
-  background-color: #eaeaea;   
-}
-
-/*Почему дполнительная серая рамка появляется при нажатии?*/
-.wtite-us-item input[type="text"]:focus,  
-.wtite-us-item input[type="email"]:focus,
-.wtite-us-item textarea:focus,
-.wtite-us-item input[type="text"]:active,
-.wtite-us-item input[type="email"]:active,
-.wtite-us-item textarea:active{
-  border: 3px solid #f7e296;
-}
-
-.wtite-us-item label{
-  font-family: "Gilroy", Arial, sans-serif;
+.wtite-us-item label,
+.wtite-us-text label{
+  font-family: "gilroyextrabold", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0px;
   font-weight: 700;
 }
+
+
+.wtite-us-text textarea {
+  width: 760px;
+  border:3px solid transparent;
+}
+
+.wtite-us-item input[type="text"]:hover,
+.wtite-us-item input[type="email"]:hover,
+.wtite-us-text textarea:hover{
+  background-color: #eaeaea;   
+}
+
+/*Почему дполнительная серая рамка появляется при нажатии?*/
+.wtite-us-item input:focus,  
+.wtite-us-text textarea:focus,
+.wtite-us-item input:active,
+.wtite-us-text textarea:active{
+  color:rgba(0,0,0,1);
+  border: 3px solid #f7e296;
+}
+
+
+button.modal-close{
+   opacity: 0.5;
+}
+
+button.modal-close:hover{
+  opacity: 1;
+}
+
+button.modal-close:focus{
+  opacity: 0.3;
+}
+
+.write-us{
+  /*display: none;*/
+}
+
+/*КАРТА*/
+
+.map{
+  position: fixed;
+  z-index: 5000;
+  display: none;
+
+  top:50%;
+  left:50%;
+
+  width: 960px;
+  height: 563px;
+  margin-top: -480px;
+  margin-left: -480px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.map p{
+  margin: 0;
+}
+
 
 /*КАТАЛОГ*/
 
